@@ -1,0 +1,29 @@
+BootStrap: docker
+From: ubuntu:22.04
+From: gcc
+
+%environment
+    export APPTAINER_INSTALL=YES
+
+%post
+    apt-get -y update
+    apt-get -y install git 
+    apt-get -y install software-properties-common
+    apt-get -y install sudo
+    mkdir sea
+    cd sea
+    git clone https://smith-nekrald@bitbucket.org/smith-projects/sea-code.git
+    mv sea-code code
+    cd code
+    git submodule update --init --recursive
+    export APPTAINER_INSTALL=YES
+    system/setup_cpp.sh
+    setup_python.sh
+    
+%runscript
+    #!/usr/bin/env bash
+    cd /sea/code
+
+%labels
+    Author "Aliaksandr Nekrashevich"
+
