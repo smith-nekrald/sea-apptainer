@@ -17,13 +17,10 @@ From: gcc
     cd code
     git submodule update --init --recursive
     export APPTAINER_INSTALL=YES
+    mkdir -p experiment
     system/setup_cpp.sh
     setup_python.sh
     
-%runscript
-    #!/usr/bin/env bash
-    cd /sea/code
-
 %labels
     Author "Aliaksandr Nekrashevich"
 

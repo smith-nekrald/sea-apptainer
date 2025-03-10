@@ -47,4 +47,6 @@ Thumbs.db
 
 experiment
 *.sif
+*sandbox*
+*.sbx
 
