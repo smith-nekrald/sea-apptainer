@@ -18,8 +18,8 @@ From: gcc
     git submodule update --init --recursive
     export APPTAINER_INSTALL=YES
     mkdir -p experiment
-    system/setup_cpp.sh
-    setup_python.sh
+    cd ..
+    code/setup_system.sh
     
 %labels
     Author "Aliaksandr Nekrashevich"
