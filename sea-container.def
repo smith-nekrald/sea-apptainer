@@ -4,6 +4,7 @@ From: gcc
 
 %environment
     export APPTAINER_INSTALL=YES
+    export APPTAINER_LAUNCH=YES
 
 %post
     apt-get -y update
