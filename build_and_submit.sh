@@ -8,7 +8,7 @@ container_root=`readlink -f "$script_dir"`
 
 cd "$container_root"
 "$container_root"/build_container.sh
-"$containr_root"/test_locally.sh
+"$container_root"/test_locally.sh
 "$container_root"/submit_container.sh
 
 set +uexo
