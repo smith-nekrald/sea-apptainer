@@ -15,7 +15,7 @@ module load StdEnv/2023
 module load apptainer
 
 source /global/home/hpc4953/sea/container/apptainer_bind.sh
-apptainer run --memory 16G --cpus 8  /global/home/hpc4953/sea/container/sea-container.sif /sea/code/run_system.sh
+apptainer run /global/home/hpc4953/sea/container/sea-container.sif /sea/code/run_system.sh
 
 set +uexo
                      
