@@ -20,7 +20,7 @@ From: gcc
     mkdir -p experiment
     cd ..
     code/setup_system.sh
-    
+   
 %labels
     Author "Aliaksandr Nekrashevich"
 
