@@ -1,5 +1,11 @@
 #!/usr/bin/env bash                                                             
+
+# Specifies job execution on cluster. This script is launched through sbatch.
                                                                                 
+# Author: Aliaksandr Nekrashevich
+# Email: aliaksandr.nekrashevich@queensu.ca
+# (c) Smith School of Business, 2025
+
 #SBATCH --qos=privileged                                                        
 #SBATCH -N 1                                                                    
 #SBATCH -c 8
@@ -11,7 +17,7 @@
 
 set -uexo 
 
-module load StdEnv/2023
+module load StdEnv/2016.4
 module load apptainer
 
 source /global/home/hpc4953/sea/container/apptainer_bind.sh

@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Submits container and related scripts to the cluster. Sends to queue with sbatch.
+
+# Author: Aliaksandr Nekrashevich
+# Email: aliaksandr.nekrashevich@queensu.ca
+# (c) Smith School of Business, 2025
+
 set -uexo
 
 script_path=`readlink -f "${BASH_SOURCE[0]}"`
@@ -11,8 +17,10 @@ cd "$container_root"
 server_home=/global/home/hpc4953
 server_user=hpc4953
 
-ssh $server_user@login.cac.queensu.ca "rm -rf $server_home/sea/container"
-ssh $server_user@login.cac.queensu.ca "mkdir -p $server_home/sea/container/experiment"
+ssh $server_user@login.cac.queensu.ca "rm -rf $server_home/sea/container/sea-container.sif"
+ssh $server_user@login.cac.queensu.ca "rm -rf $server_home/sea/container/apptainer_bind.sh"
+ssh $server_user@login.cac.queensu.ca "rm -rf $server_home/sea/container/cluster_job.sh"
+ssh $server_user@login.cac.queensu.ca "mkdir -p $server_home/sea/container/experiment/"
 
 scp sea-container.sif $server_user@login.cac.queensu.ca:$server_home/sea/container/
 scp apptainer_bind.sh  $server_user@login.cac.queensu.ca:$server_home/sea/container/
