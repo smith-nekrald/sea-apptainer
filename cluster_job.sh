@@ -9,7 +9,7 @@
 #SBATCH --qos=privileged                                                        
 #SBATCH -N 1                                                                    
 #SBATCH -c 8
-#SBATCH --mem=16g                                                               
+#SBATCH --mem=32g                                                               
 #SBATCH --time=01-22:00:00                                                      
 #SBATCH --mail-type=ALL                                                         
 #SBATCH --mail-user=aliaksandr.nekrashevich@queensu.ca                          
