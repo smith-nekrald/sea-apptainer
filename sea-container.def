@@ -13,7 +13,7 @@ From: gcc
     apt-get -y install sudo
     mkdir sea
     cd sea
-    git clone https://smith-nekrald@bitbucket.org/smith-projects/sea-code.git
+    git clone https://smith-nekrald@github.com/smith-nekrald/sea-code.git
     mv sea-code code
     cd code
     git submodule update --init --recursive
